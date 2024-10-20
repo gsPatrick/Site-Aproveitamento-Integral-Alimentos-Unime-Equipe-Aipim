@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aproveitamento Integral dos Alimentos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        .slide.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .hero-pattern {
+            background-color: #f0fff4;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%238B4513' fill-opacity='0.1'%3E%3Cpath d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+        }
+
+            /* Estilização da barra de rolagem */
+    .slide::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .slide::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .slide::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
+
+    .slide::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+    
+
+    header {
+    background-color: rgba(139, 69, 19, 0.75); /* Cor marrom com opacidade */
+    backdrop-filter: blur(10px); /* Adiciona um efeito de desfoque ao fundo */
+    z-index: 10; /* Para garantir que o cabeçalho fique acima do conteúdo */
+}
+
+/* Resto do seu CSS */
+.slide {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-red-600 text-white shadow-lg fixed top-0 left-0 w-full bg-opacity-75">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">Equipe: Aipim</div>
+            <div class="space-x-6">
+                <a href="#about" class="hover:text-red-200">Sobre</a>
+                <a href="#benefits" class="hover:text-red-200">Benefícios</a>
+                <a href="#ebook" class="hover:text-red-200">E-book</a>
+            </div>
+        </nav>
+    </header>
+    
+
+    <!-- Hero Section -->
+    <section class="hero-pattern py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold text-red-700 mb-6">Dia Mundial da Alimentação</h1>
+            <p class="text-xl text-gray-600 mb-8">Aprenda a aproveitar integralmente os alimentos e contribua para um mundo mais sustentável</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#ebook" class="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition">Ver Aproveitamento integral dos alimentos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Aproveitamento Integral dos Alimentos</h2>
+            <p>Baixar o E-book</p>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://www.fsp.usp.br/sustentarea/wp-content/uploads/2020/06/N%C3%A3o-mover-Redimensionar-site-2-1100x619.png" alt="Alimentos sustentáveis" class="rounded-lg shadow-xl">
+                </div>
+                <div>
+                    <p class="text-gray-600 mb-6">Segundo dados da FAO, aproximadamente 1,3 bilhão de toneladas de alimentos são desperdiçados anualmente no mundo. O aproveitamento integral dos alimentos é uma prática sustentável que visa reduzir esse desperdício.</p>
+                    <p class="text-gray-600">Estudos mostram que as cascas podem conter até três vezes mais nutrientes do que a polpa dos alimentos, tornando essa prática não apenas sustentável, mas também altamente nutritiva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 bg-red-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Benefícios</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Sustentabilidade</h3>
+                    <p class="text-gray-600">Menos desperdício de alimentos e menor impacto ambiental para um planeta mais saudável.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Economia</h3>
+                    <p class="text-gray-600">Redução de gastos ao usar partes dos alimentos que seriam descartadas.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Nutrição</h3>
+                    <p class="text-gray-600">Cascas e sementes são ricas em fibras, vitaminas e minerais essenciais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-book Section -->
+   <!-- E-book Section -->
+<section id="ebook" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Aproveitamento Integral dos Alimentos</h2>
+
+        <p class="text-center text-gray-600 mb-8">
+            Clique aqui para ir até o livro: 
+            <a href="https://drive.google.com/file/d/1i8nxfB5pqckHraRBXvmL7ABr-JaEHJOW/view?usp=drive_link" class="text-blue-500 underline" target="_blank">Aproveitamento Integral dos Alimentos</a>
+        </p>
+
+        <p class="text-center text-gray-600 mb-8">Abaixo temos o livro resumido:</p>
+
+        <div class="max-w-5xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+            <div class="relative" style="height: 580px;">
+                <!-- Slides -->
+                <div id="slides" class="h-full">
+                    <div class="slide active p-8 h-full overflow-y-auto" style="width: 80%; margin: 0 auto;">
+                        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                            <img src="https://i.imgur.com/BcmVayO.jpeg" alt="Alimentos sustentáveis" style="max-width: 100%; height: auto; display: block;">
+                        </div>
+
+                    </div>
+
+                <div id="slides" class="h-full">
+                    <div class="slide active p-8 h-full overflow-y-auto">
+                        <h3 class="text-2xl font-bold mb-4">Introdução</h3>
+                        <p class="text-gray-600 mb-4">O aproveitamento integral dos alimentos é uma prática sustentável que visa reduzir o desperdício de alimentos, utilizando partes que normalmente são descartadas, como cascas, sementes e talos.</p>
+                        <p class="text-gray-600">Segundo dados da FAO (Organização das Nações Unidas para Alimentação e Agricultura), aproximadamente 1,3 bilhão de toneladas de alimentos são desperdiçados anualmente no mundo.</p>
+                        <p class="text-gray-600">Além de contribuir para a redução do lixo orgânico, esse método aproveita os nutrientes muitas vezes presentes em maior quantidade nessas partes dos alimentos. Estudos mostram que as cascas podem conter até três vezes mais nutrientes do que a polpa dos alimentos.</p>
+                        <p class="text-gray-600 mt-4">Benefícios:</p>
+                        <ul class="list-disc ml-6 text-gray-600">
+                            <li>Sustentabilidade: Menos desperdício de alimentos e menor impacto ambiental.</li>
+                            <li>Economia: Redução de gastos ao usar partes dos alimentos que seriam descartadas.</li>
+                            <li>Nutrição: Muitas cascas e sementes são ricas em fibras, vitaminas e minerais.</li>
+                        </ul>
+                    </div>
+
+
+                <div id="slides" class="h-full">
+                    <div class="slide active p-8 h-full overflow-y-auto">
+                        <h3 class="text-2xl font-bold mb-4">Introdução</h3>
+                        <p class="text-gray-600 mb-4">O aproveitamento integral dos alimentos é uma prática sustentável que visa reduzir o desperdício de alimentos, utilizando partes que normalmente são descartadas, como cascas, sementes e talos.</p>
+                        <p class="text-gray-600">Segundo dados da FAO (Organização das Nações Unidas para Alimentação e Agricultura), aproximadamente 1,3 bilhão de toneladas de alimentos são desperdiçados anualmente no mundo.</p>
+                        <p class="text-gray-600">Além de contribuir para a redução do lixo orgânico, esse método aproveita os nutrientes muitas vezes presentes em maior quantidade nessas partes dos alimentos. Estudos mostram que as cascas podem conter até três vezes mais nutrientes do que a polpa dos alimentos.</p>
+                        <p class="text-gray-600 mt-4">Benefícios:</p>
+                        <ul class="list-disc ml-6 text-gray-600">
+                            <li>Sustentabilidade: Menos desperdício de alimentos e menor impacto ambiental.</li>
+                            <li>Economia: Redução de gastos ao usar partes dos alimentos que seriam descartadas.</li>
+                            <li>Nutrição: Muitas cascas e sementes são ricas em fibras, vitaminas e minerais.</li>
+                        </ul>
+                    </div>
+                    <div class="slide p-8 h-full overflow-y-auto">
+                        <h3 class="text-2xl font-bold mb-4">Biscoito de Semente de Abóbora</h3>
+                        <p class="text-gray-600 mb-4">As sementes de abóbora são ricas em magnésio, ferro e ácidos graxos essenciais, tornando este biscoito não apenas saboroso, mas também nutritivo.</p>
+                        <h4 class="text-xl font-semibold mb-2">Ingredientes:</h4>
+                        <ul class="list-disc ml-6 text-gray-600 mb-4">
+                            <li>1 xícara de sementes de abóbora</li>
+                            <li>1 xícara de farinha de trigo</li>
+                            <li>1/2 xícara de manteiga</li>
+                            <li>1 ovo</li>
+                            <li>1/2 xícara de açúcar</li>
+                            <li>1 colher de chá de fermento em pó</li>
+                            <li>Canela a gosto</li>
+                        </ul>
+                        <h4 class="text-xl font-semibold mb-2">Modo de preparo:</h4>
+                        <ol class="list-decimal ml-6 text-gray-600">
+                            <li>Lave bem as sementes de abóbora e asse-as em forno médio até que fiquem secas e crocantes.</li>
+                            <li>Triture as sementes até virar uma farinha.</li>
+                            <li>Em uma tigela, misture a farinha de semente de abóbora, a farinha de trigo e o fermento.</li>
+                            <li>Adicione a manteiga, o ovo, o açúcar e a canela. Misture bem até formar uma massa homogênea.</li>
+                            <li>Molde os biscoitos e leve ao forno preaquecido a 180°C por 15-20 minutos ou até dourar.</li>
+                        </ol>
+                    </div>
+                    <div class="slide p-8 h-full overflow-y-auto">
+                        <h3 class="text-2xl font-bold mb-4">Bolinho de Casca de Aipim</h3>
+                        <p class="text-gray-600 mb-4">A casca do aipim é rica em fibras e compostos antioxidantes, agregando valor nutricional ao prato.</p>
+                        <h4 class="text-xl font-semibold mb-2">Ingredientes:</h4>
+                        <ul class="list-disc ml-6 text-gray-600 mb-4">
+                            <li>Cascas de 1 kg de aipim (bem lavadas)</li>
+                            <li>2 ovos</li>
+                            <li>1 xícara de farinha de trigo</li>
+                            <li>1 cebola picada</li>
+                            <li>2 dentes de alho picados</li>
+                            <li>Cheiro-verde a gosto</li>
+                            <li>Sal e pimenta a gosto</li>
+                            <li>Óleo para fritar</li>
+                        </ul>
+                        <h4 class="text-xl font-semibold mb-2">Modo de preparo:</h4>
+                        <ol class="list-decimal ml-6 text-gray-600">
+                            <li>Cozinhe as cascas de aipim em água e sal até ficarem macias. Escorra e pique-as bem.</li>
+                            <li>Em uma tigela, misture as cascas picadas, os ovos, a farinha de trigo, a cebola, o alho e o cheiro-verde. Tempere com sal e pimenta.</li>
+                            <li>Modele os bolinhos e frite-os em óleo quente até ficarem dourados.</li>
+                            <li>Sirva como aperitivo ou acompanhamento.</li>
+                        </ol>
+                    </div>
+                    <div class="slide p-8 h-full overflow-y-auto">
+                        <h3 class="text-2xl font-bold mb-4">Suco de Casca de Abacaxi com Hortelã</h3>
+                        <p class="text-gray-600 mb-4">A casca do abacaxi contém bromelina, uma enzima com propriedades anti-inflamatórias.</p>
+                        <h4 class="text-xl font-semibold mb-2">Ingredientes:</h4>
+                        <ul class="list-disc ml-6 text-gray-600 mb-4">
+                            <li>Casca de 1 abacaxi</li>
+                            <li>1 litro de água</li>
+                            <li>5 folhas de hortelã</li>
+                            <li>Mel ou açúcar a gosto</li>
+                            <li>Gelo a gosto</li>
+                        </ul>
+                        <h4 class="text-xl font-semibold mb-2">Modo de preparo:</h4>
+                        <ol class="list-decimal ml-6 text-gray-600">
+                            <li>Lave bem a casca do abacaxi e coloque-a para ferver com a água por cerca de 10 minutos.</li>
+                            <li>Coe o líquido, deixe esfriar e bata no liquidificador com as folhas de hortelã.</li>
+                            <li>Adoce a gosto e sirva gelado com cubos de gelo.</li>
+                        </ol>
+                    </div>
+                    <div class="slide p-8 h-full overflow-y-auto">
+                        <h3 class="text-2xl font-bold mb-4">Farofa de Talos de Couve</h3>
+                        <p class="text-gray-600 mb-4">Os talos de couve são excelentes fontes de fibras e vitaminas do complexo B.</p>
+                        <h4 class="text-xl font-semibold mb-2">Ingredientes:</h4>
+                        <ul class="list-disc ml-6 text-gray-600 mb-4">
+                            <li>Talos de 1 maço de couve (lavados e picados)</li>
+                            <li>1 cebola picada</li>
+                            <li>2 dentes de alho picados</li>
+                            <li>1 colher de sopa de manteiga</li>
+                            <li>2 xícaras de farinha de mandioca</li>
+                            <li>Sal e pimenta a gosto</li>
+                        </ul>
+                        <h4 class="text-xl font-semibold mb-2">Modo de preparo:</h4>
+                        <ol class="list-decimal ml-6 text-gray-600">
+                            <li>Refogue a cebola e o alho na manteiga até dourarem.</li>
+                            <li>Adicione os talos de couve picados e refogue por mais alguns minutos.</li>
+                            <li>Misture a farinha de mandioca e tempere com sal e pimenta.</li>
+                            <li>Sirva como acompanhamento de carnes ou legumes.</li>
+                        </ol>
+                    </div>
+                    <div class="slide p-8 h-full overflow-y-auto">
+                        <h3 class="text-2xl font-bold mb-4">Torta de Casca de Banana</h3>
+                        <p class="text-gray-600 mb-4">As cascas de banana são ricas em fibras dietéticas e compostos antioxidantes.</p>
+                        <h4 class="text-xl font-semibold mb-2">Ingredientes:</h4>
+                        <ul class="list-disc ml-6 text-gray-600 mb-4">
+                            <li>Cascas de 5 bananas (bem lavadas)</li>
+                            <li>1 xícara de leite</li>
+                            <li>1/2 xícara de óleo</li>
+                            <li>2 ovos</li>
+                            <li>2 xícaras de farinha de trigo</li>
+                            <li>1 xícara de açúcar</li>
+                            <li>1 colher de sopa de fermento em pó</li>
+                            <li>Canela para polvilhar</li>
+                        </ul>
+                        <h4 class="text-xl font-semibold mb-2">Modo de preparo:</h4>
+                        <ol class="list-decimal ml-6 text-gray-600">
+                            <li>Bata no liquidificador as cascas de banana, o leite, o óleo e os ovos.</li>
+                            <li>Em uma tigela, misture a farinha, o açúcar e o fermento.</li>
+                            <li>Adicione a mistura do liquidificador aos ingredientes secos e mexa até ficar homogêneo.</li>
+                            <li>Despeje a massa em uma forma untada e enfarinhada.</li>
+                            <li>Asse em forno preaquecido a 180°C por cerca de 30 minutos ou até que esteja dourada.</li>
+                            <li>Polvilhe com canela antes de servir.</li>
+                        </ol>
+                    </div>
+                    <div class="slide p-8 h-full overflow-y-auto">
+                        <h3 class="text-2xl font-bold mb-4">Referências Bibliográficas</h3>
+                        <ol class="list-decimal ml-6 text-gray-600">
+                            <li>FAO. Global Food Losses and Food Waste. Rome: Food and Agriculture Organization of the United Nations, 2023.</li>
+                            <li>STORCK, C.R. et al. Folhas, talos, cascas e sementes de vegetais: composição nutricional, aproveitamento na alimentação e análise sensorial de preparações. Ciência Rural, v.43, n.3, p.537-543, 2013.</li>
+                            <li>GONDIM, J.A.M. et al. Composição centesimal e de minerais em cascas de frutas. Ciência e Tecnologia de Alimentos, v.25, n.4, p.825-827, 2005.</li>
+                            <li>SILVA, M.R.; SILVA, M.A.A.P. Aspectos nutricionais de fitatos e taninos. Revista de Nutrição, v.12, n.1, p.21-32, 1999.</li>
+                            <li>SANTOS, R.D. et al. Aproveitamento integral dos alimentos: avaliação físico-química e sensorial de preparações produzidas com cascas de frutas e hortaliças. Nutrire, v.35, n.2, p.67-82, 2010.</li>
+                            <li>MAURER, H.R. Bromelain: biochemistry, pharmacology and medical use. Cellular and Molecular Life Sciences, v.58, n.9, p.1234-1245, 2001.</li>
+                            <li>ROCHA, S.A. et al. Fibras e lipídios em alimentos vegetais oriundos do cultivo orgânico e convencional. Revista Saber Científico, v.1, n.1, p.123-127, 2008.</li>
+                            <li>EMAGA, T.H. et al. Effects of the stage of maturation and varieties on the chemical composition of banana and plantain peels. Food Chemistry, v.103, n.2, p.590-600, 2007.</li>
+                        </ol>
+                    </div>
+                    <button onclick="prevSlide()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-red-500 text-white p-2 rounded-r-lg">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button onclick="nextSlide()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-red-500 text-white p-2 rounded-l-lg">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>      
+
+    <!-- Footer -->
+    <footer class="bg-red-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2024 Equipe: Aipim. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+    
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+    
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+    
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+    
+        // Inicializar o slideshow
+        showSlide(0);
+    </script>
+</body>
+</html>
